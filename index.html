@@ -1,0 +1,82 @@
+<html>
+<head>
+    <title>CSS Only Navigation Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+        }
+        li{
+            display: inline-block;
+            float: left;
+            margin-right: 1px;
+        }
+        li a{
+            display: block;
+            min-width: 140px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: #fff;
+            background: #2f3036;
+            text-decoration: none;
+        }
+        li:hover a{
+            background: #19c589;
+        }
+        li:hover ul a{
+            background: #f3f3f3;
+            color: #2f3036;
+            height: 40px;
+            line-height: 40px;
+        }
+        li:hover ul a:hover{
+            background: #19c589;
+            color: #fff;
+        }
+        li ul{
+            display: none;
+        }
+        li ul li{
+            display: block;
+            float: none;
+        }
+        li ul li a{
+            width: auto;
+            min-width: 100px;
+            padding: 0 20px;
+        }
+        ul li a:hover + .hidden, .hidden:hover{
+            display: block;
+        }
+    </style>
+
+</head>
+<body>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li>
+            <a href="#">About</a>
+            <ul class="hidden">
+                <li><a href="#">Who We Are</a></li>
+                <li><a href="#">What We Do</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="#">Explore</a>
+            <ul class="hidden">
+                <li><a href="#">Sedan</a></li>
+                <li><a href="#">SUV</a></li>
+                <li><a href="#">Luxury</a></li>
+            </ul>
+        </li>
+        <li><a href="#">News</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+</html>
